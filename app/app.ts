@@ -5,6 +5,15 @@ function startGame() {
     logPlayer(playerName);
 
     let messagesElement: HTMLElement | null = document.getElementById('messages');
+
+    if (messagesElement === null) {
+        return messagesElement;
+    }
+    else {
+        console.log(messagesElement);
+        messagesElement = document.getElementById('messages');
+        messagesElement = 5;
+    }
     messagesElement!.innerText = 'Welcome to MultiMath! Starting new game...';
     console.log('Starting new game.');
 }
