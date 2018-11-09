@@ -4,8 +4,8 @@ function startGame() {
     let playerName: string | undefined = getInputValue('playername');
     logPlayer(playerName);
 
-    postScore(100, playerName);
-    
+    postScore(89);
+
 }
 
 function logPlayer(name:string = 'MultiMath Player'): void {
