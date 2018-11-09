@@ -5,6 +5,7 @@ function startGame() {
     logPlayer(playerName);
 
     postScore(100, playerName);
+    postScore(-5, playerName);
 
 }
 
@@ -13,8 +14,19 @@ function logPlayer(name:string = 'MultiMath Player'): void {
 }
 
 function postScore(score: number, playerName?: string): void {
+
+    let logger: (value: string) => void;
+
+    if(score < 0) {
+        logger = logError;
+    } 
+    else {
+        logger = logMessage;
+    }
     let scoreElement: HTMLElement | null = document.getElementById('postedScores');
     scoreElement!.innerText = `${score} - ${playerName}`;
+
+    logger(`Score:${score}`);
 }
 
 function getInputValue(elementID: string): string | undefined {
@@ -32,4 +44,6 @@ document.getElementById('startGame')!.addEventListener('click', startGame);
 
 let logMessage = (message: string) => console.log(message);
 
-logMessage('Welcome to MultiMath!');
+function logError(error: string): void {
+    console.error(error);
+}
