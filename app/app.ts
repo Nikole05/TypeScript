@@ -4,7 +4,7 @@ function startGame() {
     let playerName: string | undefined = getInputValue('playername');
     logPlayer(playerName);
 
-    postScore(89);
+    postScore(100, playerName);
 
 }
 
@@ -29,3 +29,7 @@ function getInputValue(elementID: string): string | undefined {
 }
 
 document.getElementById('startGame')!.addEventListener('click', startGame);
+
+let logMessage = (message: string) => console.log(message);
+
+logMessage('Welcome to MultiMath!');
