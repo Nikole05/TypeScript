@@ -4,16 +4,7 @@
         "removeComments": true,
        "module": "commonjs",
        "moduleResolution": "node",
-       "traceResolution": true,
-       "baseUrl": "./modules",
-       "paths": {
-           "my_lib": ["./curstomPath"]
-       },
-       "rootDirs": [
-           "modules",
-           "src",
-           "ts/modules"
-       ]
+       "traceResolution": true
     },
     "files": [
         "./app.ts"
