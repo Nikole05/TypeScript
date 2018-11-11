@@ -12,6 +12,9 @@
     "http-server": "^0.9.0"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.118",
+    "lodash": "^4.17.11",
+    "save": "^2.3.2",
     "systemjs": "^2.1.1"
   }
 }

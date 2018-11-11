@@ -58,18 +58,21 @@
 
     <script src="node_modules/systemjs/dist/system.js"></script>
 
-    <script>
-    System.config({
-        meta: {
-            format: 'cjs'
-        },
-        packages: {
-            '.': {
-                defaultExtention: 'js'
+	<script>
+        System.config({
+            paths: {
+                'lodash': 'node_modules/lodash/lodash'
+            },
+            meta: {
+                format: 'cjs'
+            },
+            packages: {
+                '.': {
+                    defaultExtension: 'js'
+                }
             }
-        }
-    });
-    System.import('./js/app.js');
-    </script>
+        });
+        System.import('./js/app.js');
+    </script>    
 </body>
 </html>
